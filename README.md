@@ -30,6 +30,8 @@ This project provides an useful example of application of Deep Neural Network.
 ## Team Members
 Teong Kar Chun - karchun_teong@hotmail.com
 
+TAKEHIRO MATSUNAGA - extkhiro@gmail.com
+
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
