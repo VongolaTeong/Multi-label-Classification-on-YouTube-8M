@@ -1,2 +1,4 @@
-
 *.pyc
+/dataset/
+/test_train/
+/test_validation/
