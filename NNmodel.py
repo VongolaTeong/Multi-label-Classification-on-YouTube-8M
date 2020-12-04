@@ -1,6 +1,5 @@
 from keras.layers import Input, Dense, concatenate
 from keras.models import Model
-import tensorflow as tf
 # Seed value
 # Apparently you may use different seed values at each stage
 seed_value= 100
