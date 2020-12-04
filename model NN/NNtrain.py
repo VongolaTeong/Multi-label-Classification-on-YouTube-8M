@@ -54,7 +54,7 @@ def train(train_relative_path, val_relative_path, FOLDER):
 
 
 if __name__ == '__main__':
-    train_relative_path = '../test_train'
-    val_relative_path = '../test_validation'
+    train_relative_path = '../train'
+    val_relative_path = '../validation'
     FOLDER = ''
     train(train_relative_path, val_relative_path, FOLDER)

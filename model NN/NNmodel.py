@@ -28,15 +28,14 @@ sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
 K.set_session(sess)
 
 # model
-learning_rate = 0.1
 def nn_block(x):
-    W1 = tf.Variable(tf.random_normal([1152,2048], stddev=learning_rate))
+    W1 = tf.Variable(tf.random_normal([1152,2048], stddev=0.01))
     L1 = tf.nn.relu(tf.matmul(x, W1))
 
-    W2 = tf.Variable(tf.random_normal([2048,4096], stddev=learning_rate))
+    W2 = tf.Variable(tf.random_normal([2048,4096], stddev=0.01))
     L2 = tf.nn.relu(tf.matmul(L1, W2))
 
-    W3 = tf.Variable(tf.random_normal([4096, 3862], stddev=learning_rate))
+    W3 = tf.Variable(tf.random_normal([4096, 3862], stddev=0.01))
     output = tf.matmul(L2, W3)
     output = tf.nn.softmax(output)
     return x
