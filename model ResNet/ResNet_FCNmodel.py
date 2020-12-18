@@ -26,6 +26,7 @@ def build_model():
 
     #identity map x1
     x1 = identity_map(x1)
+    x1 = identity_map(x1)
 
     #fc block 2
     in2 = Input((1024,), name='x2')
@@ -33,12 +34,15 @@ def build_model():
 
     #identity map x2
     x2 = identity_map(x2)
+    x2 = identity_map(x2)
 
     #merge x1 and x2
     x = concatenate([x1, x2], axis=1)
 
     #identity map x
     x = identity_map(x)
+    x = identity_map(x)
+    x = fc_block(x)
 
     #output
     out = Dense(3862, activation='sigmoid', name='output')(x)
