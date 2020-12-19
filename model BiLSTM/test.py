@@ -36,7 +36,7 @@ def predict(test_relative_path, submission_path, FOLDER):
 
     f_subs = glob.glob(os.path.join(submission_path, "subm*.csv"))
     df = pd.concat((pd.read_csv(f) for f in f_subs))
-    df.to_csv(os.path.join(submission_path, "output_518030990014.csv"), index=None)
+    df.to_csv(os.path.join(submission_path, "output_518030990028.csv"), index=None)
 
 
 if __name__ == '__main__':
