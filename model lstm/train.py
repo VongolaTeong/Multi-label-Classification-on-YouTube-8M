@@ -2,13 +2,14 @@
 
 import os
 from utils import tf_itr, MAP_at_10
-from FCNmodel import build_model
+from lstm import build_model
+
 
 def train(train_relative_path, val_relative_path, FOLDER):
     if not os.path.exists('weights'): os.mkdir('weights')
-    batch = 10 * 1024
+    batch = 2 * 1024
     n_itr = 10
-    n_eph = 10#100
+    n_eph = 100#100
     label_num = 3862
     _, x1_val, x2_val, y_val = next(tf_itr(val_relative_path, 10000, label_num=label_num, FOLDER=FOLDER))
     model = build_model()
@@ -31,3 +32,4 @@ if __name__ == '__main__':
     val_relative_path = '../validation'
     FOLDER = ''
     train(train_relative_path, val_relative_path, FOLDER)
+  
