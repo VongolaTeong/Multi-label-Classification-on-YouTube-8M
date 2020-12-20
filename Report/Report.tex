@@ -52,6 +52,7 @@
   \texttt{matsunagatakehiro@sjtu.edu.cn} \\
 \And
   EDUARDO WANG ZHENG \\
+	518030990025\\
 	Department of Computer Science\\
   Shanghai Jiao Tong University\\
   \texttt{eduardowangzheng@sjtu.edu.cn} \\
@@ -69,7 +70,7 @@
 \section{Introduction}
 This project is the group project of CS410 Artificial Intelligence 2020 Fall in Shanghai Jiao Tong University named Multi-label Classification on YouTube-8M. The main purpose is to use a neural network model taking two video-level features(mean\_rgb and mean\_audio) as input, to output the prediction of labels of videos from the YouTube-8M dataset. The authors develop two different neural network models, which are Deep Fully Connected Neural Networks with Merge-and-Run Mappings(DMRNets) and LSTM in their attempts to achieve this goal.
 
-\section{Neural Network Architecture}
+\section{Methods}
 \subsection{Deep Fully Connected Neural Networks with Merge-and-Run Mappings(DMRNets)}
 \subsubsection{Model Overview}
 One of the neural network architecture we consider is the deep fully connected neural networks with merge-and-run mappings, this is actually a variation of the deep convolutional neural networks with merge-and-run mappings, which coincidentally has the same short-form as DMRNets, to differentiate these two architectures, we would use DMRNets(FCN) as the short-form of Deep fully connected neural networks with Merge-and-Run Mappings and DMRNets(CNN) as the short-form of Deep convolutional neural networks with Merge-and-Run Mappings. DMRNets(CNN) itself is a variation of the residual neural network (ResNet). 
@@ -99,6 +100,40 @@ In this project, we adopt and do some variations on the DMRNets(CNN) by using th
   \caption{Part of the structure of DMRNets(FCN).}
 \end{figure}
 
+\subsubsection{Performance}
+Small datasets MAP@10: 
+Whole datasets MAP@10: 
+
+\subsection{Long short-term memory (LSTM)}
+\subsubsection{Model Overview}
+LSTM is a type of recurrent neural network (RNN) architecture. A common LSTM unit is composed of a cell and 3 gates. The cell stores values over time intervals as cell states, and the 3 gates’ main job is to regulate the flow of information into and out of the cell. Specifically, forget gate decides which information to forget, input gate decides to update which value of cell states and update cell states, and at last, the output gate output filtered cell states. To put it in an abstract high-level view, what LSTM do is using past context as reference to predict the output, for more information please refer to the original article[3]. The model structure is shown in Figure 4.
+ \begin{figure}
+  \centering
+  \fbox{\includegraphics[width=16cm, height=20cm]{lstm.png}}
+  \caption{Structure of LSTM}
+\end{figure}
+
+\subsubsection{Performance}
+Small datasets MAP@10: 
+Whole datasets MAP@10: 
+
+\subsection{Bidirectional Long short-term memory (biLSTM)}
+\subsubsection{Model Overview}
+biLSTM is a variant of LSTM, biLSTM train 2 instead of 1 LSTMs on 1 input sequence, the first on the input sequence, and the second on a reversed copy of the input sequence. In other words, it connects two hidden layers of opposite directions to the same output, this generally provide additional context to the network, thus results in better training results. for more information please refer to the original article[4]. The model structure is shown in Figure 5.
+\begin{figure}
+  \centering
+  \fbox{\includegraphics[width=16cm, height=20cm]{biLSTM.png}}
+  \caption{Structure of biLSTM}
+\end{figure}
+\subsubsection{Performance}
+Small datasets MAP@10: 
+Whole datasets MAP@10: 
+
+\section{Experiments}
+\subsection{Comparison of Performance}
+
+\section{Conclusion}
+Based on the experiments, we conclude that the xxx model has a superior performance over the other models we used.
 \section{Contributions}
 \begin{itemize}
 \item KAR CHUN TEONG: 
@@ -132,10 +167,9 @@ when listing the references.
 
 [1] Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun. Deep Residual Learning for Image Recognition.
 
-[2] Liming Zhao, Mingjie Li, Depu Meng, Xi Li, Zhaoxiang Zhang. Deep Convolutional Neural Networks with Merge-and-Run Mappings. https://arxiv.org/abs/1611.07718.
+[2] Liming Zhao, Mingjie Li, Depu Meng, Xi Li, Zhaoxiang Zhang. Deep Convolutional Neural Networks with Merge-and-Run Mappings.
 
-[3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of learning and
-recall at excitatory recurrent synapses and cholinergic modulation in rat
-hippocampal region CA3. {\it Journal of Neuroscience} {\bf 15}(7):5249-5262.
+[3] Sepp Hochreiter. Long Short-Term Memory. 
 
+[4] Alex Graves, Jürgen Schmidhuber. Framewise phoneme classification with bidirectional LSTM and other neural network architectures. 
 \end{document}
