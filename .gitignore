@@ -6,3 +6,5 @@
 /validation/
 *.h5
 /train_validation/
+*.7z
+*.csv

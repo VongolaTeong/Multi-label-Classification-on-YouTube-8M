@@ -3,7 +3,7 @@ from keras.layers.advanced_activations import LeakyReLU
 from keras.models import Model
 
 #fc block
-def fc_block(x, n=1024, d=0.2):
+def fc_block(x, n=2048, d=0.2):
     x = Dense(n, init='glorot_normal')(x)
     x = BatchNormalization()(x)
     x = LeakyReLU()(x)
