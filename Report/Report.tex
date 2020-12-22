@@ -106,17 +106,17 @@ Whole datasets MAP@10:
 
 \subsection{Long short-term memory (LSTM)}
 \subsubsection{Model Overview}
-Long short-term memory(LSTM) is a type of recurrent neural network (RNN) architecture,which is one of the most useful RNN. A common LSTM unit is composed of a cell and 3 gates. The cell stores values over time intervals as cell states, and the 3 gates’ main job is to regulate the flow of information into and out of the cell. Specifically, forget gate decides which information to forget, input gate decides to update which value of cell states and update cell states, and at last, the output gate output filtered cell states. To put it in an abstract high-level view, what LSTM do is using past context as reference to predict the output, for more information please refer to the original article[3]. The model structure is shown in Figure 4.
-
-Before LSTM, Let's talk about recurrent neural network(RNN) first. As brain can understand articles based on knowlege that people have learnt before,  some parameter in RNN can be derived from forward node. It is what tradition neural network can not do. While RNN will not keep what it learns from forward node for a long time, because every ceil of RNN will process both input and derived information in activation function. And LSTM solved this problem.
+Long short-term memory(LSTM) is a type of recurrent neural network (RNN) architecture,which is one of the most useful RNN.  Before LSTM, let's first talk about RNN, the structure of a typical RNN is shown in Figure x. As brain can understand articles based on knowledge that people have learnt before, some parameters in RNN can be derived from forward node, this was what traditional neural networks could not achieve. Traditional RNN could not store what it learned from forward node for a dragged time period, since every cell of RNN will process both input and derived information in activation function, but LSTM solved this problem.
 \begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=14cm, height=5cm]{RNN.png}}
   \caption{Structure of RNN}
 \end{figure}
-Beside forward outputs, another data are derived from forward in long short-term memory network. The increasing data will only interact with few data that processed in ceil, which means it will keep the knowledge that it learned for a long time.
 
-Here are each step in the LSTM ceil:
+A common LSTM unit is composed of a cell and 3 gates. The cell stores values over time intervals as cell states, and the 3 gates’ main job is to regulate the flow of information into and out of the cell. Specifically, forget gate decides which information to forget, input gate decides to update which value of cell states and update cell states, and at last, the output gate output filtered cell states. To put it in an abstract high-level view, what LSTM do is using past context as reference to predict the output, for more information please refer to the original article[3]. The model structure is shown in Figure 4.
+Beside forward outputs, another data are derived from forward nodes in LSTM network. The increasing data will only interact with a few data that processed in cell, which means it will keep the knowledge that it learned for a long time.
+
+Here are each step in the LSTM cell:
 \begin{itemize}
 \item step1: $f_t = \sigma(W_f[h_{t-1}, x_t] + b_f)$
 \item step2: $i_t = \sigma(W_i[h_{t-1}, x_t] + b_i)$,  $\widetilde{C} = tanh(W_C[h_{t-1}, xt] + b_C)$

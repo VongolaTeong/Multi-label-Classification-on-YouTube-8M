@@ -13,3 +13,5 @@ Report/Report.pdf
 *.pdf
 Report/Report.pdf
 Report/Report.synctex.gz
+*.gz
+*.pdf
