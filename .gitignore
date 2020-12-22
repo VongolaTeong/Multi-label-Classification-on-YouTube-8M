@@ -15,3 +15,5 @@ Report/Report.pdf
 Report/Report.synctex.gz
 *.gz
 *.pdf
+*.drawio
+/model BiLSTM2/
