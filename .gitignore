@@ -9,3 +9,5 @@
 *.7z
 *.csv
 Report/Report.pdf
+*.gz
+*.pdf
