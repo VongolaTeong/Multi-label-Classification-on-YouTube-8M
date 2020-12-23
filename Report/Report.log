@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.1)  23 DEC 2020 10:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.1)  23 DEC 2020 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -475,12 +475,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<Residual learning.png, id=84, 257.16075pt x 116.8365pt>
+<Residual learning.png, id=72, 257.16075pt x 116.8365pt>
 File: Residual learning.png Graphic file (type png)
 <use Residual learning.png>
 Package pdftex.def Info: Residual learning.png  used on input line 82.
 (pdftex.def)             Requested size: 257.16011pt x 116.83621pt.
-<DMRNets.png, id=86, 433.01775pt x 210.7875pt>
+<DMRNets.png, id=74, 433.01775pt x 210.7875pt>
 File: DMRNets.png Graphic file (type png)
 <use DMRNets.png>
 Package pdftex.def Info: DMRNets.png  used on input line 91.
@@ -503,24 +503,14 @@ l.96
                                                   \fi \fi 
 l.96 
       <./Residual learning.PNG> <./DMRNets.PNG>]
-<part of model structure(DMRNets).png, id=97, 763.05075pt x 569.12625pt>
+<part of model structure(DMRNets).png, id=85, 763.05075pt x 569.12625pt>
 File: part of model structure(DMRNets).png Graphic file (type png)
 <use part of model structure(DMRNets).png>
 Package pdftex.def Info: part of model structure(DMRNets).png  used on input li
 ne 99.
-(pdftex.def)             Requested size: 455.24919pt x 426.8089pt.
+(pdftex.def)             Requested size: 483.70518pt x 455.26688pt.
 
-Overfull \hbox (64.5642pt too wide) in paragraph at lines 99--100
- [][] 
- []
-
-<RNN.png, id=98, 1927.2pt x 642.4pt>
-File: RNN.png Graphic file (type png)
-<use RNN.png>
-Package pdftex.def Info: RNN.png  used on input line 109.
-(pdftex.def)             Requested size: 398.3133pt x 142.25964pt.
-
-Overfull \hbox (7.6283pt too wide) in paragraph at lines 109--110
+Overfull \hbox (93.02019pt too wide) in paragraph at lines 99--100
  [][] 
  []
 
@@ -529,156 +519,141 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.111 \end{figure}
-                   <./part of model structure(DMRNets).PNG>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-17.
+l.103 \newpage
+               <./part of model structure(DMRNets).PNG>]
+<RNN.png, id=92, 1927.2pt x 642.4pt>
+File: RNN.png Graphic file (type png)
+<use RNN.png>
+Package pdftex.def Info: RNN.png  used on input line 110.
+(pdftex.def)             Requested size: 398.3133pt x 142.25964pt.
 
+Overfull \hbox (7.6283pt too wide) in paragraph at lines 110--111
+ [][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+18.
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<lstm1.png, id=105, 698.61pt x 482.40225pt>
+<lstm1.png, id=93, 698.61pt x 482.40225pt>
 File: lstm1.png Graphic file (type png)
 <use lstm1.png>
-Package pdftex.def Info: lstm1.png  used on input line 125.
+Package pdftex.def Info: lstm1.png  used on input line 126.
 (pdftex.def)             Requested size: 341.43712pt x 227.61975pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<biLSTM.png, id=106, 714.67pt x 277.035pt>
+<biLSTM.png, id=94, 714.67pt x 277.035pt>
 File: biLSTM.png Graphic file (type png)
 <use biLSTM.png>
-Package pdftex.def Info: biLSTM.png  used on input line 135.
-(pdftex.def)             Requested size: 455.24986pt x 199.16913pt.
+Package pdftex.def Info: biLSTM.png  used on input line 136.
+(pdftex.def)             Requested size: 398.3368pt x 170.71579pt.
 
-Overfull \hbox (64.56487pt too wide) in paragraph at lines 135--136
+Overfull \hbox (7.65181pt too wide) in paragraph at lines 136--137
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<bilstm_structure.png, id=107, 502.87875pt x 723.70375pt>
+<bilstm_structure.png, id=95, 502.87875pt x 723.70375pt>
 File: bilstm_structure.png Graphic file (type png)
 <use bilstm_structure.png>
-Package pdftex.def Info: bilstm_structure.png  used on input line 142.
+Package pdftex.def Info: bilstm_structure.png  used on input line 143.
 (pdftex.def)             Requested size: 284.52603pt x 398.33644pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.149 
+l.146 
        <./RNN.png>]
-<lstm graph.png, id=119, 289.68225pt x 174.05025pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.150 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.150 
+       <./lstm1.png> <./biLSTM.png>]
+<lstm graph.png, id=115, 289.68225pt x 174.05025pt>
 File: lstm graph.png Graphic file (type png)
 <use lstm graph.png>
-Package pdftex.def Info: lstm graph.png  used on input line 152.
+Package pdftex.def Info: lstm graph.png  used on input line 153.
 (pdftex.def)             Requested size: 284.54968pt x 170.71678pt.
-
-Underfull \vbox (badness 1303) has occurred while \output is active []
-
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.154 \end{figure}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{figure.6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.154 \end{figure}
-                   <./lstm1.png> <./biLSTM.png>]
-<bilstm graph.png, id=128, 289.68225pt x 174.05025pt>
+<bilstm graph.png, id=116, 289.08pt x 174.05025pt>
 File: bilstm graph.png Graphic file (type png)
 <use bilstm graph.png>
-Package pdftex.def Info: bilstm graph.png  used on input line 158.
-(pdftex.def)             Requested size: 284.54968pt x 170.71678pt.
+Package pdftex.def Info: bilstm graph.png  used on input line 159.
+(pdftex.def)             Requested size: 284.54036pt x 170.71678pt.
  [6pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.178 
+l.180 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.178 
+l.180 
        <./bilstm_structure.png>] [7pdfTeX warning (ext4): destination with the 
 same identifier (name{figure.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.194 \item A
-             nalysis and implementation of DMRNets modelpdfTeX warning (ext4): 
-destination with the same identifier (name{figure.9}) has been already used, du
-plicate ignored
+l.190 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.194 \item A
-             nalysis and implementation of DMRNets model <./lstm graph.png> <./
-bilstm graph.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+l.190 \newpage
+               <./lstm graph.png> <./bilstm graph.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
-
-
-Package rerunfilecheck Warning: File `Report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Report.out':
-(rerunfilecheck)             Before: 83DF16F8BB8443650E07850F2D2821F4;1213
-(rerunfilecheck)             After:  8327C4051F95E2F2E7415B64AEEAB464;1000.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 230.
+Package rerunfilecheck Info: File `Report.out' has not changed.
+(rerunfilecheck)             Checksum: 8327C4051F95E2F2E7415B64AEEAB464;1000.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
  ) 
 Here is how much of TeX's memory you used:
- 8403 strings out of 482503
- 130692 string characters out of 5950824
- 424704 words of memory out of 5000000
- 23728 multiletter control sequences out of 15000+600000
- 556617 words of font info for 120 fonts, out of 8000000 for 9000
+ 8399 strings out of 482503
+ 130593 string characters out of 5950824
+ 423878 words of memory out of 5000000
+ 23725 multiletter control sequences out of 15000+600000
+ 556747 words of font info for 122 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,8n,42p,1124b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsubsection.2.3.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.2.2.2} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.2.1.2} has been referenced but does n
-ot exist, replaced by a fixed one
-
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texliv
-e/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf
--dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2020/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb>
-Output written on Report.pdf (8 pages, 588165 bytes).
+ 38i,8n,42p,1124b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
+ive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/tex
+mf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb>
+Output written on Report.pdf (8 pages, 587855 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 15038 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 15014 words of extra memory for PDF output out of 17280 (max. 10000000)
 
