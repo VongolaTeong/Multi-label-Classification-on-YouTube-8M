@@ -48,7 +48,7 @@ def predict(test_relative_path, submission_path, FOLDER):
 if __name__ == '__main__':
     test_relative_path = ""  # "test"
     submission_path = ''
-    FOLDER = '../validation'
+    FOLDER = '../train'
     predict(test_relative_path, submission_path, FOLDER)
     with open("MAP.txt","w") as f:
         f.write(str(gsum/gcount))
