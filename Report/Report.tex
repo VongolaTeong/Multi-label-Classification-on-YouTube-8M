@@ -145,7 +145,7 @@ In our project, we train two features separately in two biLSTM cells, then merge
 
 \section{Experiments and Analysis}
 \subsection{Training}
-We wanted to use cloud platforms to train our model, but most of them needs payment, and we don't have the fund for that, Google Cloud Platform offers 1 month free trial, but to get the free trial we need to register with credit card, which unfortunately we don't possess, at the end of the day we need to train the model using our local machines. Limited by the performance of our local machines, we could only use a small subset of the datasets for training, in this case, we use the first 200 training shards (train0000.tfrecord~train0199.tfrecord) and the first 100 validation shards (validate0000.tfrecord~validate0099.tfrecord) as our training datasets. Figure 6 and 7 shows the graph of training curve of the LSTM and biLSTM models. As shown in the figures, both models converged at around $0.75$, with biLSTM having a slightly better performance.
+We wanted to use cloud platforms to train our model, but most of them needs payment, and we don't have the fund for that, Google Cloud Platform offers 1 month free trial, but to get the free trial we need to register with credit card, which unfortunately we don't possess, at the end of the day we need to train the model using our local machines. Limited by the performance of our local machines, we could only use a small subset of the datasets for training, in this case, we use the first 200 training shards (train0000.tfrecord~train0199.tfrecord) and the first 100 validation shards (validate0000.tfrecord~validate0099.tfrecord) as our training datasets. Figure 8 and 9 shows the graph of training curve of the LSTM and biLSTM models. As shown in the figures, both models converged at around $0.75$, with biLSTM having a slightly better performance.
 
 \begin{figure}
   \centering
@@ -159,6 +159,8 @@ We wanted to use cloud platforms to train our model, but most of them needs paym
   \caption{biLSTM training graph}
 \end{figure}
 
+For unknown reasons, the training of the DMRNets model did not converge, we tried modifying various parameters and adjusting the depth of the model, but in the end it couldn't work.
+
 \subsection{Comparison and Analysis of Performance}
 \begin{table} [H]
   \caption{Performance of different models}
@@ -168,20 +170,18 @@ We wanted to use cloud platforms to train our model, but most of them needs paym
     \toprule
     Model     & 200 train MAP@10     & 100 validation MAP@10 & All datasets MAP@10 \\
     \midrule 
-DMRNets & 0  & 0   &0  \\
-LSTM & 0  & 0 & 0.759     \\
-biLSTM     & 0 & 0 & 0.763      \\
+LSTM & 0.935  & 0.946 & 0.759     \\
+biLSTM     & 0.949 & 0.961 & 0.764      \\
     \bottomrule
   \end{tabular}
 \end{table}
-The performances of 3 models are listed in Table \ref{table 1}, as we could see, the MAP@10 for the first 200 training shards and 100 validation shards are always higher than the MAP@10 for the whole datasets, the reason is obvious as we use the first 200 training shards and 100 validation shards as training datasets which leads to possible overfitting. However, we consider that the LSTM and biLSTM's performance of around 0.75 to 0.76 for the whole datasets as satisfactory, since we only use an extremely small subset to train them. We hypothesize that if we use larger datasets for training, the model would lead to more satisfactory results, too bad that we don't have the computing power to prove this hypothesis.
+The performances of 2 models are listed in Table \ref{table 1}, as we could see, the MAP@10 for the first 200 training shards and 100 validation shards are always significantly higher than the MAP@10 for the whole datasets, the reason is obvious as we use the first 200 training shards and 100 validation shards as training datasets which leads to possible overfitting. However, we consider that the LSTM and biLSTM's performance of around 0.75 to 0.76 for the whole datasets as satisfactory, since we only use an extremely small subset to train them. We hypothesize that if we use larger datasets for training, the model would lead to more satisfactory results, too bad that we don't have the computing power to prove this hypothesis.
 
 \section{Conclusion}
 Based on the experiments, we conclude that the biLSTM model has a superior performance over the other models we used. Therefore we use the biLSTM model in our final submission. However, we also submit the other models along the submission files as supplement materials for grading purpose.
 
 The corresponding files to each models in the submission folder are shown below:
 \begin{enumerate}
-\item DMRNets model: DMRNets\_model.py and DMRNets\_train.py
 \item LSTM model: LSTM\_model.py and LSTM\_train.py
 \item biLSTM model: biLSTM\_model.py, biLSTM\_train.py, and biLSTM\_test.py
 \end{enumerate}
@@ -192,7 +192,7 @@ The corresponding files to each models in the submission folder are shown below:
 \begin{itemize}
 \item Production management(organization and distribution of workload, arrangement of meeting schedule, etc.)
 \item Analysis and implementation of DMRNets model
-\item Design and compilation of final report and PPT
+\item Design, creation, and compilation of final report and PPT
 \end{itemize}
 \item MATSUNAGA TAKEHIRO
 \begin{itemize}
