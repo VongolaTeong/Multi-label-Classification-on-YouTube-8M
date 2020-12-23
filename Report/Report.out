@@ -2,15 +2,14 @@
 \BOOKMARK [1][-]{section.2}{Methods}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Deep Fully Connected Neural Networks with Merge-and-Run Mappings\(DMRNets\)}{section.2}% 3
 \BOOKMARK [3][-]{subsubsection.2.1.1}{Model Overview}{subsection.2.1}% 4
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Performance}{subsection.2.1}% 5
-\BOOKMARK [2][-]{subsection.2.2}{Long short-term memory \(LSTM\)}{section.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Model Overview}{subsection.2.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Performance}{subsection.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.3}{Bidirectional Long short-term memory \(biLSTM\)}{section.2}% 9
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Model Overview}{subsection.2.3}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Performance}{subsection.2.3}% 11
-\BOOKMARK [1][-]{section.3}{Experiments and Analysis}{}% 12
-\BOOKMARK [2][-]{subsection.3.1}{Training}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.2}{Comparison and Analysis of Performance}{section.3}% 14
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 15
-\BOOKMARK [1][-]{section.5}{Contributions}{}% 16
+\BOOKMARK [2][-]{subsection.2.2}{Long short-term memory \(LSTM\)}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Model Overview}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Bidirectional Long short-term memory \(biLSTM\)}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Model Overview}{subsection.2.3}% 8
+\BOOKMARK [1][-]{section.3}{Experiments and Analysis}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Training}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Comparison and Analysis of Performance}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 12
+\BOOKMARK [1][-]{section.5}{Contributions}{}% 13
+\BOOKMARK [1][-]{section.6}{References}{}% 14
+\BOOKMARK [1][-]{section.7}{Afterwords}{}% 15

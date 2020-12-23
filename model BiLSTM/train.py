@@ -7,9 +7,9 @@ from bilstm import build_model
 
 def train(train_relative_path, val_relative_path, FOLDER):
     if not os.path.exists('weights'): os.mkdir('weights')
-    batch = 2 * 1024
+    batch = 4 * 1024
     n_itr = 10
-    n_eph = 50#100
+    n_eph = 70#100
     label_num = 3862
     _, x1_val, x2_val, y_val = next(tf_itr(val_relative_path, 10000, label_num=label_num, FOLDER=FOLDER))
     model = build_model()
