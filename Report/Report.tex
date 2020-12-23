@@ -172,11 +172,11 @@ For unknown reasons, the training of the DMRNets model did not converge, we trie
     Model     & 200 train MAP@10     & 100 validation MAP@10 & All datasets MAP@10 \\
     \midrule 
 LSTM & 0.935  & 0.946 & 0.759     \\
-biLSTM     & 0.949 & 0.961 & 0.764      \\
+biLSTM     & 0.949 & 0.961 & 0.771      \\
     \bottomrule
   \end{tabular}
 \end{table}
-The performances of 2 models are listed in Table \ref{table 1}, as we could see, the MAP@10 for the first 200 training shards and 100 validation shards are always significantly higher than the MAP@10 for the whole datasets, the reason is obvious as we use the first 200 training shards and 100 validation shards as training datasets which leads to possible overfitting. However, we consider that the LSTM and biLSTM's performance of around 0.75 to 0.76 for the whole datasets as satisfactory, since we only use an extremely small subset to train them. We hypothesize that if we use larger datasets for training, the model would lead to more satisfactory results, too bad that we don't have the computing power to prove this hypothesis.
+The performances of 2 models are listed in Table \ref{table 1}, as we could see, the MAP@10 for the first 200 training shards and 100 validation shards are always significantly higher than the MAP@10 for the whole datasets, the reason is obvious as we use the first 200 training shards and 100 validation shards as training datasets which leads to possible overfitting. However, we consider that the LSTM and biLSTM's performance of around 0.75 to 0.77 for the whole datasets as satisfactory, since we only use an extremely small subset to train them. We hypothesize that if we use larger datasets for training, the model would lead to more satisfactory results, too bad that we don't have the computing power to prove this hypothesis.
 
 \section{Conclusion}
 Based on the experiments, we conclude that the biLSTM model has a superior performance over the other models we used. Therefore we use the biLSTM model in our final submission. However, we also submit the other models along the submission files as supplement materials for grading purpose.
