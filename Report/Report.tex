@@ -64,11 +64,11 @@
 \maketitle
 
 \begin{abstract}
-  The authors develop two models, which are Deep Fully Connected Neural Networks with Merge-and-Run Mappings(DMRNets) and long short-term memory(LSTM), to achieve multi-label classification on the YouTube-8M dataset.
+  The authors develop three models, which are Deep Fully Connected Neural Networks with Merge-and-Run Mappings(DMRNets), long short-term memory(LSTM), and bidirectional long short-term memory(biLSTM), to achieve multi-label classification on the YouTube-8M dataset.
 \end{abstract}
 
 \section{Introduction}
-This project is the group project of CS410 Artificial Intelligence 2020 Fall in Shanghai Jiao Tong University named Multi-label Classification on YouTube-8M. The main purpose is to use a neural network model taking two video-level features(mean\_rgb and mean\_audio) as input, to output the prediction of labels of videos from the YouTube-8M dataset. The authors develop two different neural network models, which are Deep Fully Connected Neural Networks with Merge-and-Run Mappings(DMRNets) and LSTM in their attempts to achieve this goal.
+This project is the group project of CS410 Artificial Intelligence 2020 Fall in Shanghai Jiao Tong University named Multi-label Classification on YouTube-8M. The main purpose is to use a neural network model taking two video-level features(mean\_rgb and mean\_audio) as input, to output the prediction of labels of videos from the YouTube-8M dataset. The authors develop three different neural network models, which are DMRNets, LSTM and biLSTM in their attempts to achieve this goal.
 
 \section{Methods}
 \subsection{Deep Fully Connected Neural Networks with Merge-and-Run Mappings(DMRNets)}
@@ -106,17 +106,16 @@ Whole datasets MAP@10:
 
 \subsection{Long short-term memory (LSTM)}
 \subsubsection{Model Overview}
-Long short-term memory(LSTM) is a type of recurrent neural network (RNN) architecture,which is one of the most useful RNN.  Before LSTM, let's first talk about RNN, the structure of a typical RNN is shown in Figure x. As brain can understand articles based on knowledge that people have learnt before, some parameters in RNN can be derived from forward node, this was what traditional neural networks could not achieve. Traditional RNN could not store what it learned from forward node for a dragged time period, since every cell of RNN will process both input and derived information in activation function, but LSTM solved this problem.
+Long short-term memory(LSTM) is a type of recurrent neural network (RNN) architecture,which is one of the most useful RNN.  Before LSTM, let's first talk about RNN, the structure of a typical RNN is shown in Figure 4. As our brain can understand articles based on knowledge that we learned before, RNN works in a similar way, RNN can derive some parameters from its forward node, this was what traditional neural networks could not achieve. However, traditional RNN could not store what it learned from forward node for a dragged time period, since every cell of RNN will process both input and derived information in activation function, but LSTM solved this problem. Beside forward outputs, another data is derived from forward nodes in LSTM network. The increasing data will only interact with a few data that processed in cell, which means it will keep the knowledge that it learned for a long time.
 \begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=14cm, height=5cm]{RNN.png}}
   \caption{Structure of RNN}
 \end{figure}
 
-A common LSTM unit is composed of a cell and 3 gates. The cell stores values over time intervals as cell states, and the 3 gates’ main job is to regulate the flow of information into and out of the cell. Specifically, forget gate decides which information to forget, input gate decides to update which value of cell states and update cell states, and at last, the output gate output filtered cell states. To put it in an abstract high-level view, what LSTM do is using past context as reference to predict the output, for more information please refer to the original article[3]. The model structure is shown in Figure 4.
-Beside forward outputs, another data are derived from forward nodes in LSTM network. The increasing data will only interact with a few data that processed in cell, which means it will keep the knowledge that it learned for a long time.
+A common LSTM unit is composed of a cell and 3 gates. The cell stores values over time intervals as cell states, and the 3 gates’ main job is to regulate the flow of information into and out of the cell. Specifically, forget gate decides which information to forget, input gate decides to update which value of cell states and update cell states, and at last, the output gate output filtered cell states. The structure of a LSTM cell is shown in Figure 5. To put it in an abstract high-level view, what LSTM do is using past context as reference to predict the output, for more information please refer to the original article[3].
 
-Here are each step in the forget gate of LSTM cell:
+Each step in the forget gate of a LSTM cell is shown below:
 \begin{itemize}
 \item step1: $f_t = \sigma(W_f[h_{t-1}, x_t] + b_f)$
 \item step2: $i_t = \sigma(W_i[h_{t-1}, x_t] + b_i)$,  $\widetilde{C} = tanh(W_C[h_{t-1}, xt] + b_C)$
@@ -136,25 +135,22 @@ Whole datasets MAP@10:
 
 \subsection{Bidirectional Long short-term memory (biLSTM)}
 \subsubsection{Model Overview}
-biLSTM is a variant of LSTM, biLSTM train 2 instead of 1 LSTMs on 1 input sequence, the first on the input sequence, and the second on a reversed copy of the input sequence. In other words, it connects two hidden layers of opposite directions to the same output, this generally provide additional context to the network, thus results in better training results. for more information please refer to the original article[4]. The model structure is shown in Figure 6.
+biLSTM is a variant of LSTM, biLSTM train two instead of one LSTMs on one input sequence, the first on the input sequence, and the second on a reversed copy of the input sequence. In other words, it connects two hidden layers of opposite directions to the same output, this generally provide additional context to the network, thus results in better training results. The structure of biLSTM is shown in Figure 6, for more information please refer to the original article[4].
 \begin{figure}[h]
   \centering
   \fbox{\includegraphics[width=16cm, height=7cm]{biLSTM.png}}
   \caption{Structure of biLSTM}
 \end{figure}
 
-In our project, we train two features in each biLSTM, then merge them together. Through full connection layer and leaky relu activation, the network will give final results. The model structure detail is in Figure (x).
-
-The model first extend mean\_RGB features to 1024. Processing the data by using batch normalization and reshape in order to run bidirectional LSTM. Then model use dropout to make some noise. The process of the other feature is as same as RGB feature. When two features have done biLSTM, model concatenate them and full connect them using leaky relu. 
+In our project, we train two features separately in two biLSTM cells, then merge them together, the model structure is shown in Figure 7. The model first extends the mean\_RGB features to 1024. Processing the data by using batch normalization and reshape in order pass the data into the bidirectional LSTM cell. Then, the model use dropout to mix some noise into the data to prevent overfitting. We do the same for the mean\_audio features. And finally we concatenate the two features into one output, and pass them through some final layers. The model structure is shown in Figure 7.
 \begin{figure}[h]
   \centering
   \fbox{\includegraphics[width=10cm, height=14cm]{bilstm_structure.png}}
-  \caption{Model structure in our project}
+  \caption{Model structure of biLSTM}
 \end{figure}
 \subsubsection{Performance}
 Small datasets MAP@10: 
 Whole datasets MAP@10: 
-
 
 \section{Experiments and Analysis}
 \subsection{Training}
@@ -189,10 +185,16 @@ biLSTM     & 0 & 0 & 0.763      \\
 \end{table}
 The performances of 3 models are listed in Table \ref{table 1}, as we could see, the MAP@10 for the first 200 training shards and 100 validation shards are always higher than the MAP@10 for the whole datasets, the reason is obvious as we use the first 200 training shards and 100 validation shards as training datasets which leads to possible overfitting. However, we consider that the LSTM and biLSTM's performance of around 0.75 to 0.76 for the whole datasets as satisfactory, since we only use an extremely small subset to train them. We hypothesize that if we use larger datasets for training, the model would lead to more satisfactory results, too bad that we don't have the computing power to prove this hypothesis.
 
-
-
 \section{Conclusion}
-Based on the experiments, we conclude that the xxx model has a superior performance over the other models we used.
+Based on the experiments, we conclude that the biLSTM model has a superior performance over the other models we used. Therefore we use the biLSTM model in our final submission. However, we also submit the other models along the submission files as supplement materials for grading purpose.
+
+The corresponding files to each models in the submission folder are shown below:
+\begin{enumerate}
+\item DMRNets model: DMRNets\_model.py and DMRNets\_train.py
+\item LSTM model: LSTM\_model.py and LSTM\_train.py
+\item biLSTM model: biLSTM\_model.py, biLSTM\_train.py, and biLSTM\_test.py
+\end{enumerate}
+
 \section{Contributions}
 \begin{itemize}
 \item KAR CHUN TEONG: 
@@ -203,23 +205,16 @@ Based on the experiments, we conclude that the xxx model has a superior performa
 \end{itemize}
 \item MATSUNAGA TAKEHIRO
 \begin{itemize}
-\item Analysis and implementation of LSTM model
-\item Training and testing of LSTM model
+\item Analysis and implementation of LSTM and biLSTM model
+\item Training and testing of LSTM and biLSTM model
 \end{itemize}
 \item EDUARDO WANG ZHENG
 \begin{itemize}
-\item Implementation of DMRNets model
-\item Training and testing of DMRNets model
+\item Research for other models
 \end{itemize}
 \end{itemize}
 
-\section*{References}
-
-References follow the acknowledgments. Use unnumbered first-level heading for
-the references. Any choice of citation style is acceptable as long as you are
-consistent. It is permissible to reduce the font size to \verb+small+ (9 point)
-when listing the references.
-{\bf Note that the Reference section does not count towards the eight pages of content that are allowed.}
+\section{References}
 \medskip
 
 \small
@@ -231,4 +226,13 @@ when listing the references.
 [3] Sepp Hochreiter. Long Short-Term Memory. 
 
 [4] Alex Graves, Jürgen Schmidhuber. Framewise phoneme classification with bidirectional LSTM and other neural network architectures. 
+
+
+\section{Afterwords}
+Other than the three models we analysed and used in the report, there are numerous models we attempted to use for this project. However, they either fail miserably in terms of performance, or they couldn't be implemented effectively for the project's purpose. And due to the limitation on length of the report, we couldn't include all the models we tried in this report.
+
+The coordination and organization of group works for members who lived in different countries are difficult than imagined, the network helps for sure but we still believe that the hurdle for our group is higher than the rest. To make the matters worse, a group member we didn't list in the title and contribution parts, Yernur Kassymov, actually joined in our group halfway in the process, declaring that he didn't join a group months ago, we thought that we are the only group with three members so it was fine, but it was wrong. Inspite of our weekly reminder of the pending work at his end, he did not finish his job and declared to take a gap year from school one week before the submission date, which essentially rendered this project useless to him since the grade would not matter to him anymore. However, the rest of the group members had to pick up the job left by him within one week, this heavily tolls on the progress and quality of our work. Pointing fingers is not our intention but we could not let it slides without any mention on this infuriating act which is a heavy violation on work ethics.
 \end{document}
+
+
+
